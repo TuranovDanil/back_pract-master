@@ -17,7 +17,7 @@ class User extends Model implements IdentityInterface
         'password',
         'surname',
         'patronymic',
-        'sex',
+        'id_sex',
         'birth',
         'address',
         'id_position',
