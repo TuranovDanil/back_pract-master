@@ -12,8 +12,5 @@ class AdminMiddleware
         if (Auth::check() && !Auth::user()->isAdmin()) {
             app()->route->redirect('/discipline');
         }
-        if (Auth::check() && !Auth::user()->isModer()) {
-            app()->route->redirect('/discipline');
-        }
     }
 }

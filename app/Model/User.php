@@ -54,7 +54,7 @@ class User extends Model implements IdentityInterface
 
     public function isAdmin()
     {
-        if ($this->role == '1') {
+        if ($this->role == 'admin') {
             return true;
         }
         return false;
@@ -62,9 +62,18 @@ class User extends Model implements IdentityInterface
 
     public function isModer()
     {
-        if ($this->role != '0') {
+        if ($this->role == 'moder') {
             return true;
         }
         return false;
     }
+
+    public function isWorker()
+    {
+        if ($this->role == 'worker') {
+            return true;
+        }
+        return false;
+    }
+
 }
